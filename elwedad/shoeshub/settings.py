@@ -152,7 +152,7 @@ MEDIA_URL = '/static/media/'
 MEDIA_ROOT = '/vol/web/media'
 STATIC_ROOT = BASE_DIR/'static'
 STATICFILES_DIRS = [
-    'shoeshub/static'
+    'elwedad/static'
 ]
 
 # Default primary key field type
