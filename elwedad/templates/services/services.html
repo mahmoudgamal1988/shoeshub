@@ -1,0 +1,123 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="contact-layout1 pb-90">
+  <div class="container">
+    <div class="row">
+      <!-- Contact box #1 -->
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="contact-box d-flex align-items-center">
+          <div class="contact-box__icon">
+            <img src="{% static 'images/icons/globe.png' %}" alt="icon" />
+          </div>
+          <div class="contact-box__content">
+            <h4 class="contact-box__title">Our Address</h4>
+            <ul class="contact-box__list list-unstyled mb-0">
+              <li>Dubai, United Arab Emirates.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.contact-box -->
+      </div>
+      <!-- /.col-lg-4 -->
+      <!-- Contact box #2 -->
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="contact-box d-flex align-items-center">
+          <div class="contact-box__icon">
+            <img src="{% static 'images/icons/envelope.png' %}" alt="icon" />
+          </div>
+          <div class="contact-box__content">
+            <h4 class="contact-box__title">Contact Info</h4>
+            <ul class="contact-box__list list-unstyled mb-0">
+              <li>Email: sales@myshoeshub.com</li>
+              <li>Phone: +971555640953</li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.contact-box -->
+      </div>
+      <!-- /.col-lg-4 -->
+      <!-- Contact box #3 -->
+      <div class="col-sm-12 col-md-4 col-lg-4">
+        <div class="contact-box d-flex align-items-center">
+          <div class="contact-box__icon">
+            <img src="{% static 'images/icons/support.png' %}" alt="icon" />
+          </div>
+          <div class="contact-box__content">
+            <h4 class="contact-box__title">Our Support</h4>
+            <ul class="contact-box__list list-unstyled mb-0">
+              <li>Support: info@myshoeshub.com</li>
+              {% comment %}
+              <li>Sales: Sales@startus.com</li>
+              {% endcomment %}
+            </ul>
+          </div>
+        </div>
+        <!-- /.contact-box -->
+      </div>
+      <!-- /.col-lg-4 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.Contact layout 1 -->
+
+<!-- ========================= 
+    Contact layout 2
+=========================  -->
+{% comment %}
+<section class="contact-layout2 py-0">
+  <div class="contact-panel">
+    <h5 class="contact-panel__title">Get In Touch</h5>
+    <p class="contact-panel__desc">
+      The importance approaching each work integrally and believe in the power
+      of simple & easy communication.
+    </p>
+    <form>
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Name" />
+          </div>
+        </div>
+        <!-- /.col-lg-6 -->
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" />
+          </div>
+        </div>
+        <!-- /.col-lg-6 -->
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="form-group mb-30">
+            <textarea
+              class="form-control"
+              placeholder="Request Details:"
+            ></textarea>
+          </div>
+        </div>
+        <!-- /.col-lg-12 -->
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <button type="submit" class="btn btn__primary btn__icon">
+            <span>Submit Request</span>
+            <i class="fa fa-long-arrow-right"></i>
+          </button>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      <!-- /.row -->
+    </form>
+  </div>
+  <!-- /.contact-panel -->
+
+  <div id="map" style="height: 800px"></div>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqrqPZOVegy1VIdyIcndxZY9YGoK-x0Yo&callback=initMap"
+    async
+    defer
+  ></script>
+</section>
+{% endcomment %}
+<!-- /.Contact layout 2 -->
+
+{% endblock %}

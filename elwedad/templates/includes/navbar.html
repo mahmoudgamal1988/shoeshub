@@ -1,0 +1,138 @@
+{% load static %}
+
+<!-- =========================
+        Header 
+    =========================== -->
+<header class="header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src={% static 'images/SH.jpg' %} class="logo-light" alt="logo"
+        width="350" height="100"> <img src={% static 'images/SH.jpg' %}
+        class="logo-dark" alt="logo" width="350" height="100">
+      </a>
+      <button class="navbar-toggler" type="button">
+        <span class="menu-lines"><span></span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav mr-auto ml-auto">
+          <li class="nav__item with-dropdown">
+            <a
+              href="{% url 'home' %}"
+              class="dropdown-toggle nav__item-link {% if request.path == '/' %}active{% endif %}"
+              >Home</a
+            >
+
+            <!-- /.dropdown-menu -->
+          </li>
+          <!-- /.nav-item -->
+          <li class="nav__item with-dropdown">
+            <a href="{% url 'store' %}" class="dropdown-toggle nav__item-link"
+              >Products</a
+            >
+
+            <!-- /.dropdown-menu -->
+          </li>
+          <!-- /.nav-item -->
+          <li class="nav__item with-dropdown">
+            <a
+              href="{% url 'services' %}"
+              class="dropdown-toggle nav__item-link"
+              >Contact Us</a
+            >
+
+            <!-- /.dropdown-menu -->
+          </li>
+          <!-- /.nav-item -->
+          {% comment %}
+          <li class="nav__item with-dropdown">
+            <a
+              href="#"
+              data-toggle="dropdown"
+              class="dropdown-toggle nav__item-link"
+              >About Us</a
+            >
+
+            <!-- /.dropdown-menu -->
+          </li>
+          {% endcomment %}
+          <!-- /.nav-item -->
+
+          <!-- /.nav-item -->
+        </ul>
+        <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-collapse -->
+      {% comment %}
+      <div class="navbar-actions">
+        <ul
+          class="navbar__actions-list list-unstyled mb-0 d-flex align-items-center"
+        >
+          <li>
+            <a
+              href="contacts.html"
+              class="action__btn btn btn__white action__btn-contact"
+              >Contact us</a
+            >
+          </li>
+          <li>
+            <a href="#" class="action__btn action__btn-search"
+              ><i class="icon-search"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" class="action__btn action__btn-humburgerMenu"
+              ><i class="icon-menu"></i
+            ></a>
+          </li>
+        </ul>
+        <!-- /.navbar__actions-list -->
+
+        <div class="cart-popup">
+          <ul class="list-unstyled">
+            <li class="cart-item">
+              <div class="cart__item-img">
+                <img src={% static 'images/shop/thumbs/1.png' %} alt="thumb">
+              </div>
+              <div class="cart__item-content">
+                <h6 class="cart__item-title">Mismo Briefcase</h6>
+                <div class="cart__item-detail"><span>1 x</span>$ 38.00</div>
+                <i class="cart__item-delete">&times;</i>
+              </div>
+              <!-- /.cart-item-content -->
+            </li>
+            <!-- /.cart-item -->
+            <li class="cart-item">
+              <div class="cart__item-img">
+                <img src={% static 'images/shop/thumbs/2.png' %} alt="thumb">
+              </div>
+              <div class="cart__item-content">
+                <h6 class="cart__item-title">Brown Leather</h6>
+                <div class="cart__item-detail"><span>1 x</span>$ 33.00</div>
+                <i class="cart__item-delete">&times;</i>
+              </div>
+              <!-- /.cart-item-content -->
+            </li>
+            <!-- /.cart-item -->
+          </ul>
+          <div class="cart-subtotal d-flex justify-content-between">
+            <span>Subtotal:</span>
+            <span class="color-theme">$71.00</span>
+          </div>
+          <!-- /.cart-subtotal -->
+          <div class="cart-action d-flex justify-content-between">
+            <a href="#" class="btn btn__primary">View Cart</a>
+            <a href="#" class="btn btn__secondary">Checkout</a>
+          </div>
+          <!-- /.cart-action -->
+        </div>
+        <!-- /.cart-popup -->
+      </div>
+      {% endcomment %}
+      <!-- /.navbar-actions -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <!-- /.navabr -->
+</header>
+<!-- /.Header -->

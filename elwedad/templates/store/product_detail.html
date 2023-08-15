@@ -1,0 +1,117 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<div class="row" >
+  <!-- /.col-lg-12 -->
+</div>
+<section class="shop-single py-0 mb-40">
+  <div class="container">
+    <!-- /.row -->
+    <div class="row align-items-center mt-50">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="product__img">
+          <img
+            src="{{ single_product.images.url }}"
+            class="zoomin"
+            alt="product"
+          />
+        </div>
+        <!-- /.product-img -->
+      </div>
+      <!-- /.col-lg-6 -->
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h1 class="product__title">{{ single_product.product_name }}</h1>
+        <div class="product__meta mb-10">
+          <div class="product__meta-review"></div>
+          <!--- .product-meta-review -->
+        </div>
+
+        <p class="product__desc">{{ single_product.description }}</p>
+        <!-- /.product-desc -->
+
+       
+        <ul class="product__details list-unstyled">
+          <li>
+            <strong>Category:</strong><span>{{ single_product.category }}</span>
+          </li>
+        </ul>
+      </div>
+      <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+        <div class="product__tabs mt-50">
+          <nav class="nav nav-tabs justify-content-center">
+            <a class="nav__link active" data-toggle="tab" href="#Description"
+              >Description</a
+            >
+
+            <a class="nav__link" data-toggle="tab" href="#Qoutation"
+              >Request Qoutation</a
+            >
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active text-center" id="Description">
+              <p>{{ single_product.description }}</p>
+            </div>
+            <!-- /.desc-tab -->
+
+            <!-- /.details-tab -->
+            <div class="tab-pane fade" id="Qoutation">
+              <form
+                class="row reviews__form"
+                action="{% url 'sendqoute' %}"
+                method="POST"
+              >
+                {% csrf_token %}
+                <div class="col-sm-6 form-group">
+                  <label for="reviewerName">Name</label>
+                  {{ form.name }}
+                  <input id="reviewerName" type="text" name='name' class="form-control" />
+                </div>
+                <!-- /.form-group -->
+                <div class="col-sm-6 form-group">
+                  <label for="reviewerEmail" required>Email</label>
+                  {{ form.email }}
+                  <input id="reviewerEmail" type="text"  name='email' class="form-control" />
+                </div>
+                <!-- /.form-group -->
+                <div class="col-sm-12 form-group">
+                  <label for="reviewerReview">Message</label>
+                  
+                  <textarea id="reviewerReview" name='qoute_info' class="form-control"></textarea>
+                </div>
+                <!-- /.form-group -->
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn__primary">Submit</button>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!--load alert message here-->
+                        {% include 'includes/alerts.html' %}
+                    </div>
+              </form>
+            </div>
+            <!-- /.reviews-tab -->
+          </div>
+        </div>
+        <!-- /.product-tabs -->
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+
+<!-- /.product single -->
+
+<!-- ========================
+    Related products
+  =========================== -->
+
+<!-- /.related-products -->
+
+{% endblock %}

@@ -1,0 +1,133 @@
+/*-------------------------
+    page title 
+-------------------------*/
+.header-transparent+.page-title {
+    margin-top: -100px;
+}
+
+.pagetitle__subheading {
+    font-family: $font-body;
+    font-size: 17px;
+    line-height: 1;
+    color: $color-gray;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.pagetitle__heading {
+    font-size: 75px;
+    color: $color-white;
+}
+
+.pagetitle__desc {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $color-white;
+}
+
+.page-title {
+    padding-top: 250px;
+    padding-bottom: 170px;
+
+    .breadcrumb {
+        margin-top: 31px;
+        margin-bottom: 0;
+    }
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $color-white;
+    }
+
+    .breadcrumb-item a:hover {
+        color: $color-theme;
+    }
+
+    .breadcrumb-item.active {
+        color: #f4f4f4;
+    }
+}
+
+.page-title-layout2 {
+    .breadcrumb {
+        margin-top: 16px;
+    }
+}
+
+.page-title-layout3 {
+    padding-top: 270px;
+    padding-bottom: 30px;
+
+    .breadcrumb {
+        margin-top: 140px;
+    }
+}
+
+.page-title-layout4 {
+    padding-bottom: 30px;
+
+    .breadcrumb {
+        margin-top: 170px;
+    }
+}
+
+.page-title-layout5 {
+    padding-top: 270px;
+}
+
+.page-title-layout6 {
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+
+.page-title-layout7 {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.page-title-layout6,
+.page-title-layout7 {
+
+    .pagetitle__heading,
+    .breadcrumb-item.active {
+        color: $color-heading;
+    }
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $color-body;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-title {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .pagetitle__desc {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    .pagetitle__heading {
+        font-size: 34px;
+    }
+
+    .page-title .breadcrumb {
+        margin-top: 20px;
+    }
+
+    .page-title-layout6 {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .page-title-layout7 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

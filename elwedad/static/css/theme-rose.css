@@ -1,0 +1,181 @@
+a,
+.heading__subtitle,
+.footer .social__icons li a:hover,
+.fancybox-item .fancybox__icon,
+.pricing-item .pricing__list li:after,
+.carousel-arrows .owl-nav .owl-prev:hover,
+.carousel-arrows .owl-nav .owl-next:hover,
+.footer .footer__widget-nav li a:after,
+.footer .widget__newsletter-form .submit-btn,
+.page-title .breadcrumb-item a:hover,
+.btn__white.btn__bordered:hover,
+.btn__link.btn__primary,
+.btn__link.btn__secondary:active,
+.btn__link.btn__secondary:focus,
+.btn__link.btn__secondary:hover,
+.social__icons li a:hover,
+.social__icons-theme li a,
+.contact__list li i,
+.navbar .dropdown-menu .nav__item .nav__item-link:hover,
+.header-layout5 .social__icons li a:hover,
+.action__btn:hover,
+.search-popup .search__popup-close:hover,
+.search-popup .module__search-btn,
+.hamburger-menu .hamburger__menu-close:hover,
+.hamburger-menu .hamburger__menu-email:hover,
+.hamburger-menu .social__icons li a,
+.menu-popup .menu-popup__close:hover,
+.menu-popup .menu-popup__list li a:hover,
+.menu-popup .social__icons li a,
+.navbar .nav__item .nav__item-link:hover,
+.navbar .dropdown-menu.mega-dropdown-menu .nav__item .nav__item-link:after,
+.accordion-item .accordion__item-header.opened .accordion__item-title,
+.accordion-item .accordion__item-header.opened .accordion__item-title:after,
+.footer .widget__newsletter-form .submit-btn,
+.footer .footer__widget-nav li a:after,
+.footer .footer__widget-nav li a:hover,
+.carousel-arrows .owl-nav .owl-prev:hover,
+.carousel-arrows .owl-nav .owl-next:hover,
+.slider:hover .carousel-arrows .owl-nav .owl-prev:hover,
+.slider:hover .carousel-arrows .owl-nav .owl-next:hover,
+.feature-item:hover .btn__link,
+.fancybox-item .fancybox__icon,
+.fancybox-item:hover .fancybox__title,
+.portfolio-item .portfolio__title a:hover,
+.portfolio-item .portfolio__cat a:hover,
+.portfolio-filter li a:hover,
+.portfolio-filter li a.active,
+.portfolio-gallery-layout2 .portfolio-item .portfolio__hover .portfolio__info .portfolio__title a:hover,
+.portfolio-gallery-layout2 .portfolio-item .portfolio__hover .portfolio__info .portfolio__cat a:hover,
+.portfolio__meta-list li span,
+.portfolio__nav a:not(.portfolio__nav-all):hover,
+.portfolio__nav .portfolio__nav-all:hover,
+.member .member__info .member__desc,
+.testimonial-item:before,
+.post-item .post__title a:hover,
+.blog-author .social__icons li a:hover,
+.blog-nav a:hover,
+.pricing-item .pricing__list li:after,
+.testimonial-layout3 .heading__title,
+.testimonial-layout3 .carousel-arrows .owl-nav .owl-next:hover:before,
+.testimonial-layout3 .carousel-arrows .owl-nav .owl-prev:hover:before,
+.comments-list .comment__item .comment__content .comment__reply,
+.product__title a:hover,
+.product__price,
+.shop-single .product__rating i.active,
+.product__meta-review a:hover,
+.widget-categories li a:after,
+.widget-categories li a:hover,
+.widget-filter input,
+.widget-poducts .widget-product-item:hover .widget__product-title a,
+.widget-posts .widget-post-item:hover .widget__post-title a {
+    color: #f44336;
+}
+
+a:hover {
+    color: #bd190e;
+}
+
+.color-theme {
+    color: #f44336 !important;
+}
+
+::selection,
+.cta__box,
+.cart__counter,
+.btn__primary,
+.btn__primary:active,
+.btn__primary:focus,
+.btn__primary.btn__bordered:before,
+.btn__primary.btn__bordered:before,
+.btn__link.btn__primary:after,
+.testimonial-layout1 .carousel-arrows .owl-nav .owl-next:hover:after,
+.testimonial-layout1 .carousel-arrows .owl-nav .owl-prev:hover:after,
+.testimonial-layout2 .carousel-arrows .owl-nav .owl-next:hover:after,
+.testimonial-layout2 .carousel-arrows .owl-nav .owl-prev:hover:after,
+.btn__link.btn__secondary:active:before,
+.btn__link.btn__secondary:focus:before,
+.btn__link.btn__secondary:hover:before,
+.navbar .dropdown-menu .nav__item:after,
+.header-layout2 .action__btn-contact,
+.hamburger-menu .hamburger__menu-email:before,
+.cart-popup .cart-item .cart__item-delete:hover,
+.progress-bar,
+.video__btn .video__player,
+.post-item .post__meta-cat,
+.post-item .post__title:before,
+.blog-nav a:hover:before,
+.contact-layout3 .contact-panel,
+.fancybox-layout5 .fancybox-item:hover .fancybox__icon,
+.portfolio__nav a:not(.portfolio__nav-all):hover:before,
+.product__tabs .nav-tabs .nav__link,
+.cart-table .cart__product-remove:hover,
+.ui-slider-horizontal .ui-slider-handle,
+.widget-filter .ui-slider-range,
+.about-layout3 .about__carousel,
+.about-layout4 .quote__panel .quote__panel-content,
+.testimonial-layout1 .carousel-arrows .owl-nav .owl-next:hover:after,
+.testimonial-layout1 .carousel-arrows .owl-nav .owl-prev:hover:after,
+.testimonial-layout2 .carousel-arrows .owl-nav .owl-next:hover:after,
+.testimonial-layout2 .carousel-arrows .owl-nav .owl-prev:hover:after,
+.testimonial-layout3 .carousel-arrows .owl-nav .owl-next:hover:after,
+.testimonial-layout3 .carousel-arrows .owl-nav .owl-prev:hover:after,
+.header-transparent .action__btn-contact:before,
+.slider .btn__white:not(.btn__bordered):before {
+    background-color: #f44336;
+}
+
+.bg-theme,
+.btn__secondary:before,
+.header-layout3 .action__btn-contact:before {
+    background-color: #f44336 !important;
+}
+
+.form-control:focus,
+.owl-thumb-item.active .testimonial__thumb,
+.btn__secondary.btn__bordered:hover,
+.footer .widget__newsletter-form .form-control:focus,
+.video__btn .video__player-animation,
+.video__btn-theme .video__player-animation,
+.owl-thumb-item.active .testimonial__thumb,
+.contact-panel .form-control:focus,
+.product__tabs .reviews__form .form-control:focus {
+    border-color: #f44336;
+}
+
+.btn__primary.btn__bordered,
+.nav-tabs .nav__link.active,
+.widget-tags ul li a,
+.header-layout3 .action__btn-contact {
+    border-color: #f44336;
+    color: #f44336;
+}
+
+.pagination li a:hover,
+.pagination li a.current,
+.widget-tags ul li a:hover,
+.fixed-navbar .action__btn-contact {
+    background-color: #f44336;
+    border-color: #f44336;
+}
+
+.about-layout3 .about__carousel:after {
+    border-color: #f44336 #f44336 transparent transparent;
+}
+
+.bg-overlay-theme:before {
+    background-color: rgba(244, 67, 54, 0.55);
+}
+
+.bg-overlay-theme-2:before {
+    background-color: rgba(244, 67, 54, 0.1);
+}
+
+.bg-overlay-theme-3:before {
+    background-color: rgba(244, 67, 54, 0.7);
+}
+
+.member .member__img-hover,
+.portfolio-item .portfolio__hover {
+    background-color: rgba(244, 67, 54, 0.95);
+}

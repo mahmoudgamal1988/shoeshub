@@ -1,0 +1,122 @@
+/*--------------------
+     Team
+---------------------*/
+.member {
+    position: relative;
+    margin-bottom: 30px;
+
+    .member__img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            @include prefix(transition, all .9s linear, webkit moz ms o);
+        }
+    }
+
+    &:hover .member__img img {
+        box-shadow: 0px 1px 73px 0px rgba(40, 40, 40, 0.15);
+        @include prefix(transform, scale(1.15), webkit moz ms o);
+    }
+
+    .member__info {
+        padding: 29px 10px 0;
+
+        .member__name {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .member__desc {
+            color: $color-theme;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+    }
+
+    .social__icons li a {
+        font-size: 16px;
+    }
+
+    .member__img-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        padding: 35px;
+        background-color: rgba($color-theme, 95%);
+        @include prefix(transition, all .4s linear, webkit moz ms o);
+
+        .social__icons li a {
+            color: $color-white;
+
+            &:hover {
+                color: $color-dark;
+            }
+        }
+
+        .member__info .member__name,
+        .member__info .member__desc {
+            color: $color-white;
+        }
+    }
+
+    &:hover .member__img-hover {
+        opacity: 1;
+    }
+}
+
+.team-layout2 .member .member__info {
+    padding: 29px 0 0 40px;
+}
+
+.team-layout3 .member__img-hover {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.team-layout4 .member__img-hover {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+}
+
+.team-layout5 {
+    .member__img-hover {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;
+    }
+
+    .member .member__info {
+        padding: 29px 0 0;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .member {
+        max-width: 400px;
+        margin: 0 auto 30px;
+
+        .member__info .member__name {
+            font-size: 17px;
+        }
+    }
+
+    .team-layout2 .member .member__info {
+        padding: 19px 0 0 0;
+    }
+}

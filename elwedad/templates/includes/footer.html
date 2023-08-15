@@ -1,0 +1,100 @@
+{% load static %}
+<!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 footer__widget footer__widget-about">
+                <h6 class="footer__widget-title">About</h6>
+                <div class="footer__widget-content d-flex">
+                  <div class="widget__about-logo" style="margin-right: auto; margin-left: -5px; margin-top: -20px;">
+                    <img src="{% static 'images/SHH.png' %}" alt="logo" >
+                  </div>
+                  <div class="widget__about-text">
+                    <p>My Shoes Hub, One place where you find the best and high class shoes you deserve to wear, just few clicks and get what you aim to.</p>
+                    <ul class="social__icons list-unstyled">
+                      <li><a href="https://www.facebook.com/profile.php?id=100063983594381&mibextid=LQQJ4d" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                      <li><a href="https://instagram.com/shoeshub.ae?igshid=MzRlODBiNWFlZA==" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                     
+                    </ul><!-- /.social-icons -->
+                  </div>
+                </div>
+              </div><!-- /.col-xl-3 -->
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-2  footer__widget footer__widget-nav">
+                <h6 class="footer__widget-title">What We're Good At</h6>
+                <div class="footer__widget-content">
+                  <nav>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Best Service</a></li>
+                      <li><a href="#">Highest Quality</a></li>
+                      <li><a href="#">Customer Oriented</a></li>
+                      {% comment %} <li><a href="#">Case Studies</a></li>
+                      <li><a href="#">Contacts</a></li>
+                      <li><a href="#">Careers</a></li> {% endcomment %}
+                    </ul>
+                  </nav>
+                </div><!-- /.footer-widget-content -->
+              </div><!-- /.col-xl-2 -->
+              <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-2 footer__widget footer__widget-nav">
+                <h6 class="footer__widget-title">What We Provide</h6>
+                <div class="footer__widget-content">
+                  <nav>
+                    <ul class="list-unstyled">
+                      <li><a href="#">Shoes</a></li>
+                      <li><a href="#">Leather</a></li>
+                      <li><a href="#">Luxury</a></li>
+                      {% comment %} <li><a href="#">Testimonials</a></li>
+                      <li><a href="#">Our Pricing</a></li> {% endcomment %}
+                    </ul>
+                  </nav>
+                </div><!-- /.footer-widget-content -->
+              </div><!-- /.col-xl-2 -->
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 footer__widget footer__widget-newsletter">
+                <div class="footer__widget-content">
+                  <p>We're committed to provide you with the best service ever, just choose what you need and contact us for details..</p>
+                
+                </div><!-- /.footer-widget-content -->
+              </div><!-- /.col-xl-4 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.footer-top -->
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <div class="footer__copyright">
+                  <nav>
+                    {% comment %} <ul class="footer__copyright-links list-unstyled d-flex flex-wrap justify-content-center mb-0">
+                      <li><a href="#">Terms & Conditions </a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Sitemap</a></li>
+                      <li><a href="#">Employee login</a></li>
+                    </ul> {% endcomment %}
+                  </nav>
+                  <p class="fz-13 mb-0">&copy; All Rights Reserved
+                    <a href="{% url 'home' %}">myshoeshub.com</a>
+                  </p>
+                </div><!-- /.Footer-copyright -->
+              </div><!-- /.col-lg-9 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.Footer-bottom -->
+      </footer><!-- /.Footer -->
+      <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
+  
+      <div class="search-popup">
+        <i class="search__popup-close">&times;</i>
+        <form class="search__popup-form">
+          <input type="text" class="search__input" placeholder="Type Words Then Enter">
+          <button class="module__search-btn"><i class="fa fa-search"></i></button>
+        </form>
+      </div><!-- /. search-popup -->
+  
+    </div><!-- /.wrapper -->
+  
+    
+  </body>
+  
+  </html>

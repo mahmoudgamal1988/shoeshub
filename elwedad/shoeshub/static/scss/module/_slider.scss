@@ -1,0 +1,213 @@
+/*------------------------
+    Slider 
+--------------------------*/
+.header-transparent+.slider {
+    margin-top: -100px;
+}
+
+.header-transparent+.slider .slide__content {
+    padding-top: 100px;
+}
+
+.hero__subtitle,
+.slide__subtitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: $color-gray2;
+    margin-bottom: 30px;
+}
+
+.hero__title,
+.slide__title {
+    font-size: 75px;
+    color: $color-white;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero__desc,
+.slide__desc {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 27px;
+    color: $color-white;
+    max-width: 630px;
+    margin-bottom: 28px;
+}
+
+.slider {
+    padding: 0;
+
+    .slide-item {
+        height: 100vh;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .btn__white:not(.btn__bordered):before {
+        background-color: $color-theme;
+    }
+
+    .carousel-arrows .owl-nav .owl-prev,
+    .carousel-arrows .owl-nav .owl-next {
+        color: $color-white;
+        border-radius: 50%;
+        line-height: 46px;
+        opacity: 0;
+        transition: opacity .5s ease, transform .4s ease;
+        @include prefix(transform, scale(0.8), webkit moz ms o);
+    }
+
+
+    &:hover .carousel-arrows .owl-nav .owl-prev,
+    &:hover .carousel-arrows .owl-nav .owl-next {
+        opacity: 1;
+        @include prefix(transform, scale(0.8), webkit moz ms o);
+
+        &:hover {
+            color: $color-theme;
+        }
+    }
+
+    .carousel-arrows .owl-nav .owl-next:before,
+    .carousel-arrows .owl-nav .owl-prev:before {
+        font-family: 'icomoon';
+        font-size: 50px;
+        transition: .4s ease;
+    }
+
+    .carousel-arrows .owl-nav .owl-next:before {
+        content: "\e905";
+    }
+
+    .carousel-arrows .owl-nav .owl-prev:before {
+        content: "\e904";
+    }
+
+    .carousel-arrows .owl-nav .owl-prev {
+        left: 30px;
+    }
+
+    .carousel-arrows .owl-nav .owl-next {
+        right: 30px;
+    }
+
+    .carousel-arrows .owl-dots {
+        bottom: 30px;
+        text-align: center;
+    }
+}
+
+.slider-centerd {
+    text-align: center;
+
+    .hero__desc,
+    .slide__desc {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .header-transparent+.slider {
+        margin-top: 0;
+    }
+
+    .slider .slide-item {
+        height: calc(100vh - 80px);
+    }
+
+    .header-transparent+.slider .slide__content {
+        padding-top: 0;
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-prev,
+    .slider .carousel-arrows .owl-nav .owl-next {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-next:before,
+    .slider .carousel-arrows .owl-nav .owl-prev:before {
+        font-size: 15px;
+    }
+}
+
+/* Large Size Devices */
+@include lg-screens {
+    .slider .carousel-arrows .owl-nav .owl-next {
+        right: 10px;
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-prev {
+        left: 10px;
+    }
+}
+
+/* Medium Size Devices */
+@include md-screens {
+    .slider .carousel-arrows .owl-nav .owl-next {
+        right: 0;
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-prev {
+        left: 0;
+    }
+
+    .hero__title,
+    .slide__title {
+        font-size: 50px;
+    }
+}
+
+/* tablets */
+@include sm-screens {
+
+    .hero__title,
+    .slide__title {
+        font-size: 40px;
+    }
+
+
+    .slider .carousel-arrows .owl-nav .owl-prev {
+        left: 10px;
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-next {
+        right: 10px;
+    }
+}
+
+/* Mobile Phones */
+@include xs-screens {
+
+    .hero__subtitle,
+    .slide__subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .hero__title,
+    .slide__title {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .hero__desc,
+    .slide__desc {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .slider .carousel-arrows .owl-nav .owl-prev,
+    .slider .carousel-arrows .owl-nav .owl-next {
+        display: none;
+    }
+}

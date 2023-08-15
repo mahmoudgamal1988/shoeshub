@@ -1,0 +1,283 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <div class="wrapper">
+      <!-- =========================
+          Header 
+      =========================== -->
+    
+  
+      <!-- ============================
+          Slider
+      ============================== -->
+     
+      
+      
+        <section class="slider slider-centerd">
+          
+          
+            <div class="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-light" data-slide="1"
+              data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true" data-space="0"
+              data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
+              {% for bg in backgrounds %}
+                <div class="slide-item bg-overlay">
+                  <div class="bg-img"><img src={{ bg.bg_image.url }} alt="slide img"></div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
+                        <div class="slide__content">
+                          <span class="slide__subtitle">{{bg.title_small}}</span>
+                          <h2 class="slide__title">{{ bg.title_big }}</h2>
+                          <p class="slide__desc">{{ bg.title_mid }}!</p>
+                          <a href="#" class="btn btn__white mx-3">Get Started</a>
+                          <a class="video__btn popup-video mx-3" href={{ bg.video_link }}>
+                            <div class="video__player">
+                              <span class="video__player-animation"></span>
+                              <span class="video__player-animation video__player-animation-2"></span>
+                              <i class="fa fa-play"></i>
+                            </div>
+                            <span class="video__btn-title color-white ml-20">Play Video</span>
+                          </a>
+                        </div><!-- /.slide-content -->
+                      </div><!-- /.col-lg-10 -->
+                    </div><!-- /.row -->
+                  </div><!-- /.container -->
+                </div><!-- /.slide-item -->
+                {% endfor %}
+              
+            </div><!-- /.carousel -->
+          
+          
+        </section><!-- /.slider -->
+      
+  
+      <!-- ==========================
+           fancybox layout 5
+      =========================== -->
+      <section class="fancybox-layout5 text-center pb-20">
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                <div class="heading text-center mb-60">
+                  {% for sc in section2 %}
+                    
+                    <span class="heading__subtitle">{{ sc.section2_green }}</span>
+                    <h2 class="heading__title">{{ sc.section2_black }}</h2>
+                    
+                  {% endfor %}
+                </div><!-- /.heading -->
+              </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div class="row">
+              <!-- fancybox item #1 -->
+              {% for service in services %}
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <div class="fancybox-item">
+                    <div class="fancybox__icon">
+                      <img src={{ service.services_thumbnail.url }} alt="icon">
+                    </div><!-- /.fancybox-icon -->
+                    <div class="fancybox__content">
+                      <h4 class="fancybox__title">{{ service.service_name }}</h4>
+                      <p class="fancybox__desc">{{ service.services_description }}</p>
+                    </div><!-- /.fancybox-content -->
+                  </div><!-- /.fancybox-item -->
+                </div><!-- /.col-lg-3 -->
+              {% endfor %}
+              
+              <!-- fancybox item #2 -->
+              
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+       
+      </section><!-- /. fancybox layout 5 -->
+  
+      <!-- ================================
+        about layout 3
+        =============================== -->
+      <section class="about-layout3 pb-0">
+        
+          <div class="container-fluid col-padding-0">
+            <div class="row align-items-center">
+              <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
+                <div class="about__imgs-wrapper">
+                  <div class="about__img">
+                    <img src="{{ vision.vision_image.url }}" alt="img" class="img-fluid w-100">
+                  </div><!-- /.about__img -->
+                  <div class="about__carousel">
+                    <div class="carousel owl-carousel carousel-dots carousel-dots-light" data-slide="1" data-slide-md="1"
+                      data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
+                      data-loop="true" data-speed="400">
+                      <div class="text__block">
+                        <h4 class="text__block-title">Our Vision</h4>
+                        <p class="text__block-desc">{{ vision.our_vision }}</p>
+                      </div><!-- /.text__block -->
+                      <div class="text__block">
+                        <h4 class="text__block-title">Our Mission</h4>
+                        <p class="text__block-desc">{{ vision.our_mission }}</p>
+                      </div><!-- /.text__block -->
+                    </div>
+                  </div><!-- /.about__carousel -->
+                </div><!-- /.about__imgs-wrapper -->
+              </div><!-- /.col-xl-5 -->
+              <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7">
+                <div class="content-wrapper">
+                  <span class="heading__subtitle">{{ vision.green_title }}</span>
+                  <h2 class="heading__title mb-40">{{ vision.black_title }}</h2>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <p class="heading__desc-primary mb-20">{{ vision.ceo_word }}</p>
+                      <img src="{{ vision.ceo_signature.url }}" alt="Signuture" class="mb-20">
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-sm-6">
+                      <p class="heading__desc">{{ vision.short_bio_1 }} </p>
+                      <p class="heading__desc">{{ vision.short_bio_2 }} </p>
+                      {% comment %} <a href="#" class="btn btn__primary btn__icon">
+                        <span>Let's Get in Touch</span>
+                        <i class="fa fa-long-arrow-right"></i>
+                      </a> {% endcomment %}
+                    </div><!-- /.col-lg-6 -->
+                  </div><!-- /.row -->
+    
+                </div><!-- /.content-wrapper -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        
+      </section><!-- /.about layout3 -->
+  
+      <!-- =========================== 
+        portfolio grid 
+      ============================= -->
+      <section class="portfolio-grid text-center pb-70">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+              <div class="heading text-center mb-40">
+                <h2 class="heading__title">Featured Works</h2>
+                <p class="heading__desc">At Startus, we shows only the best websites and portfolios built completely with
+                  passion, simplicity & creativity !</p>
+              </div><!-- /.heading -->
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <ul class="list-unstyled portfolio-filter d-flex flex-wrap justify-content-center mb-40">
+                <li><a class="filter active" href="#" data-filter="all">All Works</a></li>
+                {% for category in categories %}
+                  <li><a class="filter" href="#" data-filter=".filter-{{ category.category_name }}">{{ category.category_name }}</a></li>
+                {% endfor %}
+                
+              </ul><!-- /.portfolio-filter  -->
+            </div><!-- /.col-lg-12 -->
+          </div><!-- /.row -->
+          <div id="filtered-items-wrap" class="row">
+            <!-- portfolio item #1 -->
+            {% for product in products %}
+              <div class="col-sm-6 col-md-4 col-lg-4 mix filter-{{ product.category }}">
+                <div class="portfolio-item">
+                  <div class="portfolio__img">
+                    <img src="{{ product.images.url }}" alt="portfolio img">
+                    <div class="portfolio__hover">
+                      <div class="portfolio__hover-content">
+                        <a class="zoom__icon popup-gallery-item" href="{{ product.images.url }}">
+                          <i class="icon-search"></i>
+                        </a>
+                      </div><!-- /.portfolio-hover-content -->
+                    </div><!-- /.portfolio-hover -->
+                  </div><!-- /.portfolio-img -->
+                  <div class="portfolio__info">
+                    <h4 class="portfolio__title"><a href="{{ product.get_url }}">{{ product.product_name }}</a></h4>
+                   
+                  </div><!-- /.portfolio-info -->
+                </div><!-- /.portfolio-item -->
+              </div><!-- /.col-lg-4 -->
+            {% endfor %}
+           
+          
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section><!-- /.portfolio grid  -->
+  
+      <!-- ================================
+         Banner 2
+        =============================== -->
+     
+  
+      <!-- ========================= 
+              Testimonial  
+      =========================  -->
+     
+  
+      <!-- =====================
+           Clients
+        ======================== -->
+   
+  
+      <!-- ========================
+          Team 1
+      ========================== -->
+      
+      <!-- ================================
+        Call to Action
+        =============================== -->
+      
+  
+      <!-- =========================== 
+        Counters
+      ============================= -->
+    
+  
+      <!-- ========================
+           Blog Grid
+        ========================== -->
+     
+  
+      <!-- ========================
+        Footer
+      ========================== -->
+    
+      <button id="scrollTopBtn"><i class="fa fa-long-arrow-up"></i></button>
+  
+      <div class="search-popup">
+        <i class="search__popup-close">&times;</i>
+        <form class="search__popup-form">
+          <input type="text" class="search__input" placeholder="Type Words Then Enter">
+          <button class="module__search-btn"><i class="fa fa-search"></i></button>
+        </form>
+      </div><!-- /. search-popup -->
+  
+      <div class="hamburger-menu">
+        <i class="hamburger__menu-close">&times;</i>
+        <div class="hamburger__menu-content">
+          <h3 class="hamburger__menu-title">Ready to start your next portfolio?</h3>
+          <a class="hamburger__menu-email mb-50" href="mailto:Startus@7oroof.com">Startus@7oroof.com</a>
+          <ul class="instagram__images list-unstyled d-flex flex-wrap mb-60">
+            <li><img src="assets/images/portfolio/grid/1.jpg" alt="instagram"></li>
+            <li><img src="assets/images/portfolio/grid/2.jpg" alt="instagram"></li>
+            <li><img src="assets/images/portfolio/grid/3.jpg" alt="instagram"></li>
+            <li><img src="assets/images/portfolio/grid/4.jpg" alt="instagram"></li>
+            <li><img src="assets/images/portfolio/grid/5.jpg" alt="instagram"></li>
+            <li><img src="assets/images/portfolio/grid/6.jpg" alt="instagram"></li>
+          </ul><!-- /.instagram-images -->
+          <p class="color-white font-weight-bold">Follow Us</p>
+          <ul class="social__icons list-unstyled mb-0">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul><!-- /.social-icons -->
+        </div><!-- /.hamburger__menu-content -->
+      </div><!-- /.hamburger-menu -->
+  
+    </div><!-- /.wrapper -->
+  
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+{% endblock  %}

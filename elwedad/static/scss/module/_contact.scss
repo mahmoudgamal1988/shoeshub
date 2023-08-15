@@ -1,0 +1,155 @@
+/*----------------------------
+    Contact
+----------------------------*/
+.contact-box {
+    margin-bottom: 30px;
+
+    .contact-box__title {
+        font-size: 17px;
+    }
+
+    .contact-box__icon {
+        flex: 0 0 80px;
+        max-width: 80px;
+    }
+
+    .contact-box__content {
+        flex: 1;
+    }
+
+    .contact-box__list li {
+        font-size: 14px;
+    }
+}
+
+.contact-panel {
+    background-color: $color-white;
+    padding: 80px 90px;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(40, 40, 40, .06);
+    max-width: 570px;
+
+
+    .contact-panel__title {
+        font-size: 33px;
+    }
+
+    .contact-panel__desc {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .form-control {
+        padding-left: 0;
+        border: 0;
+        border-bottom: 2px solid #e9e9e9;
+
+        &:focus {
+            border-color: $color-theme;
+        }
+    }
+}
+
+.contact-panel-layout2 {
+    background-color: $color-white;
+    padding: 50px 40px;
+    border-radius: 4px;
+
+    .contact-panel__title {
+        font-size: 22px;
+        margin-bottom: 37px;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+
+        i {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            color: #e9e9e9;
+            font-size: 16px;
+            @include prefix(transform, translateY(-50%), webkit moz ms o);
+        }
+    }
+
+    .form-control {
+        height: 55px;
+        padding-left: 50px;
+        color: #e9e9e9;
+    }
+
+    .btn__primary {
+        min-width: 130px;
+        height: 60px;
+    }
+}
+
+.contact-layout2 {
+    .contact-panel {
+        position: absolute;
+        left: 9%;
+        top: 50%;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+        z-index: 3;
+    }
+}
+
+.contact-layout3 {
+    .contact-panel {
+        position: absolute;
+        left: 9%;
+        top: 50%;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+        z-index: 3;
+        background-color: $color-theme;
+        padding: 40px;
+        width: 330px;
+
+        .contact-panel__title {
+            font-size: 17px;
+            color: $color-white;
+        }
+
+        .contact-panel__list li {
+            font-size: 13px;
+            color: $color-white;
+            margin-bottom: 7px;
+
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        .close-contact-panel {
+            color: $color-white;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 23px;
+            line-height: 1;
+        }
+    }
+}
+
+.contact__list li {
+    font-size: 14px;
+    line-height: 24px;
+
+    i {
+        font-size: 16px;
+        margin-right: 9px;
+        color: $color-theme;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .contact-layout2 {
+        .contact-panel {
+            padding: 15px;
+            position: static;
+            @include prefix(transform, translateY(0), webkit moz ms o);
+        }
+    }
+}

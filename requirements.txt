@@ -1,0 +1,6 @@
+Django>=4.0.4,<4.1
+psycopg2>=2.9.3,<2.10
+Pillow==9.5.0
+django-jazzmin
+requests==2.26.0
+uwsgi>=2.0.19,<2.1

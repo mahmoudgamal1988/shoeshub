@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="My Shoes Hub">
+  <link href={% static 'images/SH.jpg' %} rel="icon">
+  <title>MyShoesHub</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cRoboto:400,500,700&display=swap">
+  <link rel="stylesheet" href={% static 'css/libraries.css' %} />
+  <link rel="stylesheet" href={% static 'css/style.css' %} />
+
+  <script src={% static 'js/jquery-3.3.1.min.js' %}></script>
+  <script src={% static 'js/plugins.js' %}></script>
+  <script src={% static 'js/main.js' %}></script>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  {% include 'includes/navbar.html' %}
+
+  {% block content %}
+  <!-- content -->
+  {% endblock %}
+
+
+<!-- footer -->
+{% include 'includes/footer.html' %}

@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="page-title page-title-layout5 bg-overlay">
+  <div class="bg-img">
+    <img src="{% static 'images/backgrounds/12.jpg' %}" alt="background" />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-8">
+        <h1 class="pagetitle__heading">{{ category.category_name}}</h1>
+      </div>
+      <!-- /.col-lg-6 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.page-title -->
+
+<!-- ========================
+     shop 
+  =========================== -->
+<section class="shop-grid">
+  <div class="container">
+    <div class="row">
+      <!-- Product item #1 -->
+      {% for sg in single_category %}
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <div class="product-item">
+          <div class="product__img">
+            <img src="{{ sg.images.url }}" alt="Product" />
+            <div class="product__action">
+              <a href="{{ sg.get_url }}" class="btn btn__primary"
+                >View Product</a
+              >
+            </div>
+            <!-- /.product-action -->
+          </div>
+          <!-- /.product-img -->
+          <div class="product__content">
+            <h4 class="product__title">
+              <a href="{{ sg.get_url }}">{{ sg.product_name }}</a>
+            </h4>
+          </div>
+          <!-- /.product-content -->
+        </div>
+        <!-- /.product-item -->
+      </div>
+
+      {% endfor %}
+
+      <!-- /.col-lg-3 -->
+    </div>
+    <!-- /.row -->
+    <!--<div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+        <nav class="pagination-area">
+          <ul class="pagination justify-content-center">
+            <li><a class="current" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li>
+              <a href="#"><i class="fa fa-angle-right"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.pagination-area -->
+      </div>
+      <!-- /.col-lg-12 -->
+    </div> -->
+
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+<!-- /.shop -->
+{% endblock %}
