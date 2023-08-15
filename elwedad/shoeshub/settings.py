@@ -146,11 +146,11 @@ USE_TZ = True
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = BASE_DIR/'media'
 
-STATIC_URL = '/static/static/'
-MEDIA_URL = '/static/media/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
-MEDIA_ROOT = '/vol/web/media/'
-STATIC_ROOT = '/vol/web/static/'
+MEDIA_ROOT = BASE_DIR/'media'
+STATIC_ROOT = BASE_DIR/'static'
 # STATICFILES_DIRS = [
 #     'elwedad/static'
 # ]
