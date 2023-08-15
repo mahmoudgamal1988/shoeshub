@@ -150,7 +150,7 @@ STATIC_URL = '/static/static/'
 MEDIA_URL = '/static/media/'
 
 MEDIA_ROOT = '/vol/web/media/'
-STATIC_ROOT = '/vol/web/'
+STATIC_ROOT = '/vol/web/static/'
 # STATICFILES_DIRS = [
 #     'elwedad/static'
 # ]
