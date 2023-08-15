@@ -31,7 +31,8 @@ RUN python -m venv /py && \
     chmod -R 755 /vol && \
     chmod -R +x /scripts && \
     chown -R django-user:django-user /elwedad && \
-    chmod -R 777 /elwedad 
+    chmod -R 777 /elwedad && \
+    /py/bin/python manage.py collectstatic --noinput 
 
 
 ENV PATH="/scripts:/py/bin:$PATH"
