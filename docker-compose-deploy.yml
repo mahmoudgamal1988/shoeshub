@@ -5,8 +5,9 @@ services:
     build:
       context: .
     restart: always
-    # volumes:
-    #   - static-data:/vol/web
+    volumes:
+      - ./static:/elwedad/static
+      - ./media:/elwedad/media
     environment:
       - DB_HOST=db
       - DB_NAME=${DB_NAME}
@@ -37,9 +38,17 @@ services:
     ports:
       - 80:8000
       - 443:443
-    # volumes:
-    #   - static-data:/vol/web
+    volumes:
+      - ./static:/elwedad/static
+      - ./media:/elwedad/media
 
 volumes:
   postgres-data:
   static-data:
+
+  static:
+    driver: local
+    driver_opts:
+      type: none
+      device: /elwedad/static
+      o: bind
