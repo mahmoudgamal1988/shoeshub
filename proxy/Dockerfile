@@ -16,8 +16,8 @@ USER root
 RUN mkdir -p /vol/static && \
     chmod 755 /vol/static && \
     chown -R nginx:nginx /vol/static && \
-    chmod 755 nginx:nginx /../elwedad && \
-    chown -R nginx:nginx /../elwedad && \
+    chmod 755  /elwedad && \
+    chown -R nginx:nginx /elwedad && \
     touch /etc/nginx/conf.d/default.conf && \
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
     chmod +x /run.sh
