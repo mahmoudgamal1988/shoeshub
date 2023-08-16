@@ -32,6 +32,8 @@ RUN python -m venv /py && \
     chmod -R +x /scripts && \
     chown -R django-user:django-user /elwedad && \
     chmod -R 777 /elwedad && \
+    chown -R django-user:django-user /elwedad/static && \
+    chmod -R 777 /elwedad/static && \
     /py/bin/python manage.py collectstatic --noinput 
 
 # && \
