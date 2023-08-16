@@ -31,7 +31,7 @@ services:
 
   proxy:
     build:
-      context: ..
+      context: ./proxy
     restart: always
     depends_on:
       - elwedad
