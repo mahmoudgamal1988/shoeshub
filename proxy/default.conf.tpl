@@ -2,7 +2,7 @@ server {
     listen ${LISTEN_PORT};
 
     location /static {
-        alias /elwedad/static/;
+        alias /elwedad/shoeshub/static/;
     }
 
     location / {
