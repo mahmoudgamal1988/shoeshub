@@ -5,8 +5,9 @@ services:
     build:
       context: .
     restart: always
+    user: "1000:1000"
     volumes:
-      - ./static:/elwedad/static:ro
+      - ./static:/elwedad/static
       - ./media:/elwedad/media
     environment:
       - DB_HOST=db
