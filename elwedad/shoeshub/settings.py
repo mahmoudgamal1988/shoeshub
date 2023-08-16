@@ -147,7 +147,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+STATOC_ROOT = BASE_DIR/'static'
 
 # STATIC_ROOT = '/vol/web/static'
 # print(STATIC_ROOT)
